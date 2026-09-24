@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <button class="menu-hamburguer" aria-label="Abrir menu">☰</button>
+
+    <div class="menu">
+        <a href="index.html">Início</a>
+
+        <div class="dropdown">
+            <button class="dropdown-botao">Projetos ▾</button>
+
+            <div class="dropdown-conteudo">
+                <a href="projetos.html">Todos os projetos</a>
+                <a href="projetos.html">Projeto 1</a>
+                <a href="projetos.html">Projeto 2</a>
+            </div>
+        </div>
+
+        <a href="contato.html">Contato</a>
+    </div>
+</nav>
+
+    <main>
+        <h1>Meus Projetos</h1>
+
+        <p>Aqui estão alguns dos projetos que estou desenvolvendo.</p>
+    </main>
+<div class="projetos">
+
+    <article class="card">
+        <img src="assets/imagens/projeto1.webp"
+             alt="Projeto 1 - Desenvolvimento de Sistemas">
+
+        <span class="badge">Em desenvolvimento</span>
+
+        <h2>Projeto 1</h2>
+        <p>Desenvolvimento de Sistemas</p>
+
+        <button type="button" class="botao-projeto" data-projeto="1">
+            Ver projeto
+        </button>
+    </article>
+
+    <article class="card">
+        <img src="assets/imagens/projeto2.webp"
+             alt="Projeto 2 - Site Institucional">
+
+        <span class="badge">Projeto ativo</span>
+
+        <h2>Projeto 2</h2>
+        <p>Site Institucional</p>
+
+        <button type="button" class="botao-projeto" data-projeto="2">
+            Ver projeto
+        </button>
+    </article>
+
+    <article class="card">
+        <img src="assets/imagens/projeto3.webp"
+             alt="Projeto 3 - Aplicativo Mobile">
+
+        <span class="badge">Em desenvolvimento</span>
+
+        <h2>Projeto 3</h2>
+        <p>Aplicativo Mobile</p>
+
+        <button type="button" class="botao-projeto" data-projeto="3">
+            Ver projeto
+        </button>
+    </article>
+
+</div>
+<div id="modal-projeto" class="modal">
+
+    <div class="modal-conteudo">
+
+        <button id="fechar-modal-projeto"
+                aria-label="Fechar informações do projeto">
+            ×
+        </button>
+
+        <h2 id="titulo-modal-projeto">Informações do projeto</h2>
+
+        <p id="texto-modal-projeto">
+            Selecione um projeto para visualizar suas informações.
+        </p>
+
+    </div>
+
+</div>
+<script type="module" src="js/script.js"></script>
+</body>
+
+</html>

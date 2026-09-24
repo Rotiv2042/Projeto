@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Site</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ===============================
+         MENU
+    ================================ -->
+
+    <nav>
+
+        <button
+            class="menu-hamburguer"
+            aria-label="Abrir menu">
+            ☰
+        </button>
+
+        <div class="menu">
+
+            <a href="?pagina=inicio" data-rota="inicio">
+                Início
+            </a>
+
+            <div class="dropdown">
+
+                <button class="dropdown-botao">
+                    Projetos ▾
+                </button>
+
+                <div class="dropdown-conteudo">
+
+                    <a
+                        href="?pagina=projetos"
+                        data-rota="projetos">
+                        Todos os projetos
+                    </a>
+
+                    <a
+                        href="?pagina=projetos"
+                        data-rota="projetos">
+                        Projeto 1
+                    </a>
+
+                    <a
+                        href="?pagina=projetos"
+                        data-rota="projetos">
+                        Projeto 2
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a
+                href="?pagina=contato"
+                data-rota="contato">
+                Contato
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ===============================
+         CONTEÚDO PRINCIPAL
+    ================================ -->
+
+    <main id="conteudo">
+
+
+        <!-- ===============================
+             INÍCIO
+        ================================ -->
+
+        <section id="inicio">
+
+            <h1>
+                Bem-vindo ao meu portfólio!
+            </h1>
+
+            <p>
+                Olá! Este é o meu projeto desenvolvido
+                com HTML, CSS e JavaScript.
+            </p>
+
+            <p>
+                Aqui você poderá conhecer meus projetos
+                e entrar em contato comigo.
+            </p>
+
+
+            <section class="destaque">
+
+                <h2>
+                    Desenvolvimento Web
+                </h2>
+
+                <p>
+                    Aprendendo a criar páginas modernas
+                    utilizando HTML, CSS e JavaScript.
+                </p>
+
+            </section>
+
+
+            <button id="botao">
+                Saiba mais
+            </button>
+
+
+            <!-- MODAL SAIBA MAIS -->
+
+            <div id="modal" class="modal">
+
+                <div class="modal-conteudo">
+
+                    <button
+                        id="fechar-modal"
+                        aria-label="Fechar modal">
+                        ×
+                    </button>
+
+                    <h2>
+                        Sobre o projeto
+                    </h2>
+
+                    <p>
+                        Este projeto apresenta uma plataforma
+                        desenvolvida para divulgar informações,
+                        projetos e formas de contato.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===============================
+             PROJETOS
+        ================================ -->
+
+        <section id="projetos">
+
+            <h1>
+                Meus Projetos
+            </h1>
+
+            <p>
+                Aqui estão alguns dos projetos que estou desenvolvendo.
+            </p>
+
+
+            <div class="alerta" role="alert">
+
+                <strong>Informação:</strong>
+
+                Confira os projetos disponíveis abaixo.
+
+            </div>
+
+
+            <div class="projetos">
+
+
+                <!-- PROJETO 1 -->
+
+                <article class="card">
+
+                    <img
+                        src="assets/imagens/projeto1.webp"
+                        alt="Projeto 1 - Desenvolvimento de Sistemas">
+
+                    <span class="badge">
+                        Em desenvolvimento
+                    </span>
+
+                    <h2>
+                        Projeto 1
+                    </h2>
+
+                    <p>
+                        Desenvolvimento de Sistemas
+                    </p>
+
+                    <button
+                        type="button"
+                        class="botao-projeto"
+                        data-projeto="1">
+                        Ver projeto
+                    </button>
+
+                </article>
+
+
+                <!-- PROJETO 2 -->
+
+                <article class="card">
+
+                    <img
+                        src="assets/imagens/projeto2.webp"
+                        alt="Projeto 2 - Site Institucional">
+
+                    <span class="badge">
+                        Projeto ativo
+                    </span>
+
+                    <h2>
+                        Projeto 2
+                    </h2>
+
+                    <p>
+                        Site Institucional
+                    </p>
+
+                    <button
+                        type="button"
+                        class="botao-projeto"
+                        data-projeto="2">
+                        Ver projeto
+                    </button>
+
+                </article>
+
+
+                <!-- PROJETO 3 -->
+
+                <article class="card">
+
+                    <img
+                        src="assets/imagens/projeto3.webp"
+                        alt="Projeto 3 - Aplicativo Mobile">
+
+                    <span class="badge">
+                        Em desenvolvimento
+                    </span>
+
+                    <h2>
+                        Projeto 3
+                    </h2>
+
+                    <p>
+                        Aplicativo Mobile
+                    </p>
+
+                    <button
+                        type="button"
+                        class="botao-projeto"
+                        data-projeto="3">
+                        Ver projeto
+                    </button>
+
+                </article>
+
+            </div>
+
+
+            <!-- MODAL DOS PROJETOS -->
+
+            <div
+                id="modal-projeto"
+                class="modal">
+
+                <div class="modal-conteudo">
+
+                    <button
+                        id="fechar-modal-projeto"
+                        aria-label="Fechar informações do projeto">
+                        ×
+                    </button>
+
+                    <h2 id="titulo-modal-projeto">
+                        Informações do projeto
+                    </h2>
+
+                    <p id="texto-modal-projeto">
+                        Selecione um projeto para visualizar
+                        suas informações.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ===============================
+             CONTATO
+        ================================ -->
+
+        <section id="contato">
+
+            <h1>
+                Entre em contato
+            </h1>
+
+            <form id="formulario">
+
+                <fieldset>
+
+                    <legend>
+                        Dados pessoais
+                    </legend>
+
+
+                    <label for="nome">
+                        Nome:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        required>
+
+
+                    <label for="email">
+                        E-mail:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required>
+
+
+                    <label for="cpf">
+                        CPF:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cpf"
+                        name="cpf"
+                        pattern="[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2}"
+                        required>
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>
+                        Contato
+                    </legend>
+
+
+                    <label for="telefone">
+                        Telefone:
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                        required>
+
+
+                    <label for="cep">
+                        CEP:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cep"
+                        name="cep"
+                        pattern="[0-9]{5}-?[0-9]{3}"
+                        required>
+
+
+                    <label for="mensagemTexto">
+                        Mensagem:
+                    </label>
+
+                    <textarea
+                        id="mensagemTexto"
+                        name="mensagemTexto"
+                        required></textarea>
+
+                </fieldset>
+
+
+<button type="submit">
+    Enviar
+</button>
+
+<p id="mensagem"></p>
+
+<div id="lista-mensagens"></div>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+<script type="module" src="js/script.js"></script>
+<script type="module" src="js/navegacao.js"></script>
+<script type="module" src="js/formulario.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <button class="menu-hamburguer" aria-label="Abrir menu">☰</button>
+
+    <div class="menu">
+        <a href="index.html">Início</a>
+
+        <div class="dropdown">
+            <button class="dropdown-botao">Projetos ▾</button>
+
+            <div class="dropdown-conteudo">
+                <a href="projetos.html">Todos os projetos</a>
+                <a href="projetos.html">Projeto 1</a>
+                <a href="projetos.html">Projeto 2</a>
+            </div>
+        </div>
+
+        <a href="contato.html">Contato</a>
+    </div>
+</nav>
+    <main>
+        <h1>Entre em contato</h1>
+
+        <p>Preencha o formulário abaixo para entrar em contato.</p>
+<form id="formulario">
+
+    <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="cpf">CPF:</label>
+        <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            pattern="[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2}"
+            required
+        >
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Contato</legend>
+
+        <label for="telefone">Telefone:</label>
+        <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+            required
+        >
+
+        <label for="cep">CEP:</label>
+        <input
+            type="text"
+            id="cep"
+            name="cep"
+            pattern="[0-9]{5}-?[0-9]{3}"
+            required
+        >
+
+    </fieldset>
+
+    <button type="submit">Cadastrar</button>
+
+</form>
+
+<section id="historico-mensagens">
+    <h2>Cadastros realizados</h2>
+
+    <div id="lista-mensagens"></div>
+</section>
+    </main>
+
+<script type="module" src="js/script.js"></script>
+<script type="module" src="js/navegacao.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+
+:root {
+
+    /* Cores */
+    --cor-primaria: #222222;
+    --cor-primaria-hover: #00aaff;
+    --cor-secundaria: #555555;
+    --cor-destaque: #00aaff;
+
+    --cor-fundo: #f2f2f2;
+    --cor-superficie: #ffffff;
+    --cor-borda: #dddddd;
+    --cor-texto: #333333;
+    --cor-texto-secundario: #666666;
+
+    /* Estados */
+    --cor-erro: #ff0000;
+    --cor-sucesso: #008000;
+
+    /* Tipografia */
+    --fonte-base: Arial, sans-serif;
+
+    --tamanho-xs: 14px;
+    --tamanho-sm: 16px;
+    --tamanho-md: 18px;
+    --tamanho-lg: 24px;
+    --tamanho-xl: 32px;
+
+    /* Espaçamento modular */
+    --espaco-1: 5px;
+    --espaco-2: 10px;
+    --espaco-3: 15px;
+    --espaco-4: 20px;
+    --espaco-5: 30px;
+    --espaco-6: 40px;
+    --espaco-7: 50px;
+}
+
+
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+   ============================== */
+
+body {
+    font-family: var(--fonte-base);
+    background-color: var(--cor-fundo);
+    margin: 0;
+    padding: var(--espaco-4);
+}
+
+h1 {
+    color: var(--cor-texto);
+    font-size: var(--tamanho-xl);
+}
+
+h2 {
+    color: var(--cor-secundaria);
+    font-size: var(--tamanho-lg);
+}
+
+
+/* ==============================
+   NAVEGAÇÃO
+   ============================== */
+
+nav {
+    background-color: var(--cor-primaria);
+    padding: var(--espaco-3);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: var(--cor-superficie);
+    text-decoration: none;
+    margin: 0 var(--espaco-3);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--cor-primaria-hover);
+}
+
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+   ============================== */
+
+main {
+    text-align: center;
+    padding: var(--espaco-7);
+}
+
+main p {
+    font-size: var(--tamanho-md);
+}
+
+
+/* ==============================
+   BOTÕES
+   ============================== */
+
+button {
+    padding: 12px 25px;
+    font-size: var(--tamanho-sm);
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+    color: var(--cor-superficie);
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: scale(1.05);
+}
+
+
+/* ==============================
+   PROJETOS
+   ============================== */
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espaco-4);
+    margin-top: var(--espaco-4);
+}
+.card{grid-column: span 4
+    ;}
+
+
+/* ==============================
+   FORMULÁRIO
+   ============================== */
+
+form {
+    max-width: 500px;
+    margin: var(--espaco-5) auto;
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--cor-superficie);
+    padding: var(--espaco-5);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin-top: var(--espaco-3);
+    margin-bottom: var(--espaco-1);
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    margin-bottom: var(--espaco-2);
+    padding: 12px;
+    font-size: var(--tamanho-sm);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+
+/* ==============================
+   BOTÃO DO FORMULÁRIO
+   ============================== */
+
+form button {
+    padding: 12px;
+    font-size: var(--tamanho-sm);
+    cursor: pointer;
+    background-color: var(--cor-primaria);
+    color: var(--cor-superficie);
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+    background-color: var(--cor-primaria-hover);
+    transform: scale(1.03);
+}
+
+
+/* ==============================
+   CARDS
+   ============================== */
+
+.card {
+    background-color: var(--cor-superficie);
+    padding: var(--espaco-4);
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--cor-borda);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 350px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==============================
+   DESTAQUE
+   ============================== */
+
+.destaque {
+    background-color: var(--cor-superficie);
+    max-width: 700px;
+    margin: var(--espaco-6) auto;
+    padding: var(--espaco-5);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.destaque h2 {
+    color: var(--cor-primaria);
+    margin-bottom: var(--espaco-3);
+}
+
+.destaque p {
+    color: var(--cor-texto-secundario);
+    font-size: 17px;
+}
+
+
+/* ==============================
+   FIELDSET
+   ============================== */
+
+fieldset {
+    margin-bottom: var(--espaco-4);
+    padding: var(--espaco-4);
+}
+
+fieldset label {
+    display: block;
+    margin-top: var(--espaco-3);
+    margin-bottom: var(--espaco-1);
+}
+
+fieldset input {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--espaco-3);
+}
+
+
+/* ==============================
+   FOCO DOS CAMPOS
+   ============================== */
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid var(--cor-destaque);
+}
+
+
+/* ==============================
+   MENSAGENS
+   ============================== */
+
+#mensagem {
+    font-weight: bold;
+    margin-top: var(--espaco-3);
+}
+
+#mensagem.erro {
+    color: var(--cor-erro);
+}
+
+#mensagem.sucesso {
+    color: var(--cor-sucesso);
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+/* 1 - Telas muito grandes */
+@media (min-width: 1200px) {
+    .card {
+        grid-column: span 4;
+    }
+}
+
+/* 2 - Desktops */
+@media (max-width: 1199px) {
+    .card {
+        grid-column: span 4;
+    }
+}
+
+/* 3 - Tablets */
+@media (max-width: 992px) {
+    .card {
+        grid-column: span 6;
+    }
+}
+
+/* 4 - Celulares grandes */
+@media (max-width: 768px) {
+    .card {
+        grid-column: span 6;
+    }
+}
+
+/* 5 - Celulares pequenos */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-hamburguer {
+    display: none;
+}
+
+.menu.ativo {
+    display: flex;
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-botao {
+    background: none;
+    padding: 0;
+    font-size: var(--tamanho-sm);
+}
+
+.dropdown-conteudo {
+    display: none;
+    position: absolute;
+    background-color: var(--cor-superficie);
+    min-width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.dropdown-conteudo a {
+    display: block;
+    color: var(--cor-texto);
+    padding: 10px;
+    margin: 0;
+}
+
+.dropdown-conteudo a:hover {
+    background-color: var(--cor-fundo);
+}
+
+.dropdown:hover .dropdown-conteudo {
+    display: block;
+}
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    padding: var(--espaco-4);
+    z-index: 100;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal-conteudo {
+    background-color: var(--cor-superficie);
+    max-width: 500px;
+    padding: var(--espaco-5);
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+}
+
+#fechar-modal-projeto {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: var(--cor-texto);
+    font-size: 24px;
+    padding: 5px 10px;
+}
+.botao-projeto {
+    margin-top: auto;
+}
+.badge {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: var(--cor-superficie);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: var(--tamanho-xs);
+    font-weight: bold;
+    margin-top: var(--espaco-2);
+}
+
+.alerta {
+    background-color: #e6f2ff;
+    color: var(--cor-texto);
+    border-left: 5px solid var(--cor-destaque);
+    padding: var(--espaco-3);
+    margin: var(--espaco-4) auto;
+    max-width: 800px;
+    border-radius: 8px;
+}
