@@ -7,7 +7,7 @@
 
     <title>Meu Site</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -16,15 +16,17 @@
          MENU
     ================================ -->
 
-    <nav>
+    <nav aria-label="Navegação principal">
 
         <button
             class="menu-hamburguer"
-            aria-label="Abrir menu">
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu-principal">
             ☰
         </button>
 
-        <div class="menu">
+        <div class="menu" id="menu-principal">
 
             <a href="?pagina=inicio" data-rota="inicio">
                 Início
@@ -32,7 +34,9 @@
 
             <div class="dropdown">
 
-                <button class="dropdown-botao">
+                <button class="dropdown-botao"
+                arial-expanded="false"
+                aria-haspopup="true">
                     Projetos ▾
                 </button>
 
@@ -120,29 +124,34 @@
 
             <!-- MODAL SAIBA MAIS -->
 
-            <div id="modal" class="modal">
+<div
+    id="modal"
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="titulo-modal">
 
-                <div class="modal-conteudo">
+    <div class="modal-conteudo">
 
-                    <button
-                        id="fechar-modal"
-                        aria-label="Fechar modal">
-                        ×
-                    </button>
+        <button
+            id="fechar-modal"
+            aria-label="Fechar modal">
+            ×
+        </button>
 
-                    <h2>
-                        Sobre o projeto
-                    </h2>
+        <h2 id="titulo-modal">
+            Sobre o projeto
+        </h2>
 
-                    <p>
-                        Este projeto apresenta uma plataforma
-                        desenvolvida para divulgar informações,
-                        projetos e formas de contato.
-                    </p>
+        <p>
+            Este projeto apresenta uma plataforma
+            desenvolvida para divulgar informações,
+            projetos e formas de contato.
+        </p>
 
-                </div>
+    </div>
 
-            </div>
+</div>
 
         </section>
 
@@ -154,9 +163,9 @@
 
         <section id="projetos">
 
-            <h1>
+            <h2>
                 Meus Projetos
-            </h1>
+            </h2>
 
             <p>
                 Aqui estão alguns dos projetos que estou desenvolvendo.
@@ -304,9 +313,9 @@
 
         <section id="contato">
 
-            <h1>
+            <h2>
                 Entre em contato
-            </h1>
+            </h2>
 
             <form id="formulario">
 
@@ -412,7 +421,7 @@
     </main>
 
 
-<script type="module" src="js/script.js"></script>
+<script type="module" src="js/script.min.js"></script>
 <script type="module" src="js/navegacao.js"></script>
 <script type="module" src="js/formulario.js"></script>
 </body>

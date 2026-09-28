@@ -1,0 +1,26 @@
+{
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "Este projeto foi desenvolvido durante a disciplina de Experiência Prática. O objetivo é criar um site com uma estrutura organizada, acessível e responsiva, utilizando boas práticas de desenvolvimento web.",
+  "main": "index.js",
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rotiv2042/Projeto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Rotiv2042/Projeto/issues"
+  },
+  "homepage": "https://github.com/Rotiv2042/Projeto#readme",
+  "devDependencies": {
+    "vite": "^8.3.1"
+  }
+}

@@ -283,9 +283,11 @@ fieldset input {
    ============================== */
 
 input:focus,
-textarea:focus {
-    outline: none;
-    border: 2px solid var(--cor-destaque);
+textarea:focus,
+button:focus,
+a:focus {outline: 3px solid var(--cor-destaque);
+outline-offset: 2px;
+border-radius: 10px ;
 }
 
 
@@ -354,6 +356,7 @@ textarea:focus {
 .menu.ativo {
     display: flex;
 }
+
 .dropdown {
     position: relative;
 }
@@ -385,7 +388,8 @@ textarea:focus {
     background-color: var(--cor-fundo);
 }
 
-.dropdown:hover .dropdown-conteudo {
+.dropdown:hover .dropdown-conteudo,
+.dropdown:focus-within .dropdown-conteudo {
     display: block;
 }
 .modal {
@@ -426,7 +430,7 @@ textarea:focus {
 }
 .badge {
     display: inline-block;
-    background-color: var(--cor-destaque);
+    background-color: #0077aa;
     color: var(--cor-superficie);
     padding: 5px 10px;
     border-radius: 20px;

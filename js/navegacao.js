@@ -105,3 +105,26 @@ const paginaInicial =
     obterPaginaDaURL();
 
 mostrarPagina(paginaInicial);
+// ===============================
+// MENU HAMBURGUER
+// ===============================
+
+const botaoMenu =
+    document.querySelector(".menu-hamburguer");
+
+const menu =
+    document.querySelector("#menu-principal");
+
+botaoMenu.addEventListener("click", function () {
+
+    menu.classList.toggle("ativo");
+
+    const aberto =
+        menu.classList.contains("ativo");
+
+    botaoMenu.setAttribute(
+        "aria-expanded",
+        aberto
+    );
+
+});

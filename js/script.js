@@ -1,3 +1,4 @@
+import { salvarCadastros, carregarCadastros } from "./storage.js";
 // ===============================
 // MODAL "SAIBA MAIS"
 // ===============================
@@ -14,6 +15,7 @@ const fecharModal =
 
 if (botao && modal && fecharModal) {
 
+    // Abre o modal
     botao.addEventListener("click", function () {
 
         modal.classList.add("ativo");
@@ -21,9 +23,22 @@ if (botao && modal && fecharModal) {
     });
 
 
+    // Fecha pelo botão
     fecharModal.addEventListener("click", function () {
 
         modal.classList.remove("ativo");
+
+    });
+
+
+    // Fecha ao apertar Esc
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+
+            modal.classList.remove("ativo");
+
+        }
 
     });
 
